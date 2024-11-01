@@ -1,6 +1,8 @@
 package dto;
 
-public class UserDto {
+import java.io.Serializable;
+
+public class UserDto implements Serializable {
     private String username;
     private String password;
 

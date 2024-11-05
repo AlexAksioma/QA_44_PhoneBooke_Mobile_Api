@@ -1,10 +1,13 @@
 package config;
 
+import dto.ContactDtoLombok;
 import dto.TokenDto;
 import dto.UserDtoLombok;
 import interfaces.BaseApi;
+import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeSuite;
 
 import static helper.PropertiesReader.getProperty;
@@ -12,6 +15,8 @@ import static io.restassured.RestAssured.given;
 
 public class ContactController implements BaseApi {
     protected TokenDto tokenDto;
+
+    private RequestSpecification requestSpecWithToken;
 
     @BeforeSuite
     public void login() {
@@ -27,6 +32,11 @@ public class ContactController implements BaseApi {
                 .thenReturn();
         if (response.getStatusCode() == 200) {
             tokenDto = response.as(TokenDto.class);
+            requestSpecWithToken = new RequestSpecBuilder()
+                    .addHeader("Authorization", tokenDto.getToken())
+                    .addHeader("ContentType", "application/json")
+                    //.setContentType(ContentType.JSON)
+                    .build();
         }else {
             System.out.println("Something went wrong, status code -->"+response.getStatusCode());
         }
@@ -38,6 +48,24 @@ public class ContactController implements BaseApi {
                 .when()
                 .get(BASE_URL+GET_ALL_CONTACTS_PATH)
                 .thenReturn();
+    }
 
+    protected Response updateContactResponseWithToken(ContactDtoLombok contact){
+        return given()
+                .body(contact)
+                .header("Authorization", tokenDto.getToken())
+                .contentType(ContentType.JSON)
+                //.spec(requestSpecWithToken)
+                .put(BASE_URL+GET_ALL_CONTACTS_PATH)
+                .thenReturn();
+    }
+    protected Response updateContactResponse(ContactDtoLombok contact, String token){
+        return given()
+                .body(contact)
+                .header("Authorization", token)
+                .contentType(ContentType.JSON)
+                //.spec(requestSpecWithToken)
+                .put(BASE_URL+GET_ALL_CONTACTS_PATH)
+                .thenReturn();
     }
 }

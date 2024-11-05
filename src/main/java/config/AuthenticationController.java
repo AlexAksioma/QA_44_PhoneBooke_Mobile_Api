@@ -19,4 +19,12 @@ public class AuthenticationController implements BaseApi {
                 .post(BASE_URL+url)
                 .thenReturn();
     }
+    public Response requestRegLogin(UserDtoLombok user, String url){
+        return given()
+                .body(user)
+                .contentType(ContentType.JSON)
+                .when()
+                .post(BASE_URL+url)
+                .thenReturn();
+    }
 }

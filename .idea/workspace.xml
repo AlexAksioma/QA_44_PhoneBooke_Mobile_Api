@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4041311-9419-44a4-9c5f-ba00fc1783c3" name="Changes" comment="rest registration tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api_tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="c4041311-9419-44a4-9c5f-ba00fc1783c3" name="Changes" comment="rest update contact tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/AuthenticationScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/SplashScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/RegistrationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/SplashTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/ContactController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +61,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_44/QA_44_PhoneBooke_Mobile_Api"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/QA_Auto_Projects/QA_44/QA_44_PhoneBooke_Mobile_Api&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\QA_Auto_Projects\QA_44\QA_44_PhoneBooke_Mobile_Api\src\test\resources" />
@@ -76,8 +81,8 @@
       <recent name="interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTests.loginNegativeTest_wrongPassword">
-    <configuration name="LoginTests.loginNegativeTest_wrongPassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RegistrationTests.registrationPositiveTest">
+    <configuration name="RegistrationTests.registrationPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -90,7 +95,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.LoginTests.loginNegativeTest_wrongPassword&quot;" />
+            <option value="&quot;mobile_tests.RegistrationTests.registrationPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -101,7 +106,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SplashTests.validateVersionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -114,7 +119,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.LoginTests.loginPositiveTest&quot;" />
+            <option value="&quot;mobile_tests.SplashTests.validateVersionTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -125,7 +130,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateContactTests.updateContactNegativeTest_NameIsNull" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -138,7 +143,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationTests&quot;" />
+            <option value="&quot;api_tests.UpdateContactTests.updateContactNegativeTest_NameIsNull&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -149,7 +154,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registrationNegativeTest_duplicateUser409" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateContactTests.updateContactNegativeTest_wrongToken401" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -162,7 +167,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationTests.registrationNegativeTest_duplicateUser409&quot;" />
+            <option value="&quot;api_tests.UpdateContactTests.updateContactNegativeTest_wrongToken401&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -173,7 +178,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registrationNegativeTest_wrongEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateContactTests.updateContactPositiveTestRequiredFields" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -186,7 +191,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;api_tests.RegistrationTests.registrationNegativeTest_wrongEmail&quot;" />
+            <option value="&quot;api_tests.UpdateContactTests.updateContactPositiveTestRequiredFields&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginTests.loginNegativeTest_wrongPassword" />
-        <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
-        <item itemvalue="Gradle.RegistrationTests.registrationNegativeTest_duplicateUser409" />
-        <item itemvalue="Gradle.RegistrationTests" />
-        <item itemvalue="Gradle.RegistrationTests.registrationNegativeTest_wrongEmail" />
+        <item itemvalue="Gradle.RegistrationTests.registrationPositiveTest" />
+        <item itemvalue="Gradle.SplashTests.validateVersionTest" />
+        <item itemvalue="Gradle.UpdateContactTests.updateContactNegativeTest_NameIsNull" />
+        <item itemvalue="Gradle.UpdateContactTests.updateContactPositiveTestRequiredFields" />
+        <item itemvalue="Gradle.UpdateContactTests.updateContactNegativeTest_wrongToken401" />
       </list>
     </recent_temporary>
   </component>
@@ -224,11 +229,29 @@
       <option name="project" value="LOCAL" />
       <updated>1730454415262</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rest login tests">
+      <option name="closed" value="true" />
+      <created>1730826975225</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730826975225</updated>
+    </task>
+    <task id="LOCAL-00003" summary="rest update contact tests">
+      <option name="closed" value="true" />
+      <created>1730832769625</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730832769625</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rest registration tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="rest registration tests" />
+    <MESSAGE value="rest login tests" />
+    <MESSAGE value="rest update contact tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="rest update contact tests" />
   </component>
 </project>

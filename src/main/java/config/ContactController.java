@@ -17,6 +17,7 @@ public class ContactController implements BaseApi {
     protected TokenDto tokenDto;
 
     private RequestSpecification requestSpecWithToken;
+    RequestSpecBuilder requestSpecBuilder;
 
     @BeforeSuite
     public void login() {

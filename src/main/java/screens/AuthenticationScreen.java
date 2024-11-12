@@ -17,6 +17,8 @@ public class AuthenticationScreen extends BaseScreen{
     AndroidElement inputPassword;
     @FindBy(id = "com.sheygam.contactapp:id/regBtn")
     AndroidElement btnRegistartion;
+    @FindBy(id = "com.sheygam.contactapp:id/loginBtn")
+    AndroidElement btnLogin;
 
 
     public void typeAuthenticationForm(UserDtoLombok user){
@@ -27,5 +29,8 @@ public class AuthenticationScreen extends BaseScreen{
 
     public void clickBtnRegistration() {
         btnRegistartion.click();
+    }
+    public void clickBtnLogin() {
+        btnLogin.click();
     }
 }

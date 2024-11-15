@@ -12,13 +12,15 @@ import java.net.URL;
 
 public class AppiumConfig {
     public static AppiumDriver<AndroidElement> driver;
-// "platformName": "Android",
+    public int height = 0, width = 0;
+
+    // "platformName": "Android",
 //         "deviceName": "Nex5",
 //         "platformVersion": "8.0",
 //         "appPackage": "com.sheygam.contactapp",
 //         "appActivity": ".SplashActivity"
     @BeforeMethod
-    public void setup(){
+    public void setup() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("platformName", "Android");
         desiredCapabilities.setCapability("deviceName", "Nex5");
@@ -32,10 +34,13 @@ public class AppiumConfig {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
+        height = driver.manage().window().getSize().getHeight();
+        width = driver.manage().window().getSize().getWidth();
+        System.out.println(width + "X" + height);
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         //driver.quit();
     }
 }

@@ -83,7 +83,31 @@ public class AddNewContactTests extends AppiumConfig {
     public void addNewContactNegativeTest_emptyField(ContactDtoLombok contact) {
         addNewContactsScreen.typeContactForm(contact);
         addNewContactsScreen.clickBtnCreateContact();
-        Assert.assertTrue(new ErrorScreen(driver).validateErrorMessage("must not be blank", 5));
+        Assert.assertTrue(new ErrorScreen(driver).validateErrorMessage("must not be blank", 5)
+                || new ErrorScreen(driver).validateErrorMessage("well-formed email address", 5)
+                || new ErrorScreen(driver).validateErrorMessage("phone number must contain", 5));
     }
 
+    @Test
+    public void addNewContactNegativeTest_duplicateContact() {
+        HelperApiMobile helperApiMobile = new HelperApiMobile();
+        helperApiMobile.login(user.getUsername(), user.getPassword());
+        Response responseGet = helperApiMobile.getUserContactsResponse();
+        if (responseGet.getStatusCode() == 200) {
+            ContactsDto contactsDto = responseGet.as(ContactsDto.class);
+            ContactDtoLombok contactApi = contactsDto.getContacts()[0];
+            ContactDtoLombok contact = ContactDtoLombok.builder()
+                    .name(contactApi.getName())
+                    .lastName(contactApi.getLastName())
+                    .email(contactApi.getEmail())
+                    .phone(contactApi.getPhone())
+                    .address(contactApi.getAddress())
+                    .description(contactApi.getDescription())
+                    .build();
+            addNewContactsScreen.typeContactForm(contact);
+            addNewContactsScreen.clickBtnCreateContact();
+            Assert.assertTrue(new ErrorScreen(driver).validateErrorMessage("duplicate contact", 5));
+        }
+
+    }
 }

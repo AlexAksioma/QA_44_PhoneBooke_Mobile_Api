@@ -10,6 +10,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import screens.*;
 
 import java.util.Arrays;
@@ -18,11 +19,13 @@ import static helper.PropertiesReader.getProperty;
 import static helper.RandomUtils.*;
 
 public class AddNewContactTests extends AppiumConfig {
+    SoftAssert softAssert = new SoftAssert();
     UserDtoLombok user = UserDtoLombok.builder()
             .username(getProperty("data.properties", "email"))
             .password(getProperty("data.properties", "password"))
             .build();
     AddNewContactsScreen addNewContactsScreen;
+    ContactsScreen contactsScreen;
 
     @BeforeMethod
     public void loginAndGoToAddNewContactScreen() {
@@ -30,14 +33,15 @@ public class AddNewContactTests extends AppiumConfig {
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
         authenticationScreen.typeAuthenticationForm(user);
         authenticationScreen.clickBtnLogin();
-        new ContactsScreen(driver).clickBtnAddNewContact();
+        contactsScreen = new ContactsScreen(driver);
+        contactsScreen.clickBtnAddNewContact();
         addNewContactsScreen = new AddNewContactsScreen(driver);
     }
 
     @Test
     public void addNewContactPositiveTest() {
         ContactDtoLombok contact = ContactDtoLombok.builder()
-                .name(generateString(5))
+                .name("!!!!" + generateString(5))
                 .lastName(generateString(10))
                 .email(generateEmail(10))
                 .phone(generatePhone(12))
@@ -109,5 +113,25 @@ public class AddNewContactTests extends AppiumConfig {
             Assert.assertTrue(new ErrorScreen(driver).validateErrorMessage("duplicate contact", 5));
         }
 
+    }
+
+    @Test
+    public void addNewContactPositiveTestValidateUIListContact() {
+        ContactDtoLombok contact = ContactDtoLombok.builder()
+                .name("!!!!" + generateString(2))
+                .lastName(generateString(10))
+                .email(generateEmail(10))
+                .phone(generatePhone(12))
+                .address(generateString(8) + " app." + generatePhone(2))
+                .description(generateString(15))
+                .build();
+        addNewContactsScreen.typeContactForm(contact);
+        addNewContactsScreen.clickBtnCreateContact();
+        softAssert.assertTrue(new ContactsScreen(driver).validatePopMessage());
+
+        contactsScreen.validateUIListContact(contact);
+
+
+        softAssert.assertAll();
     }
 }

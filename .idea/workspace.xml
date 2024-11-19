@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4041311-9419-44a4-9c5f-ba00fc1783c3" name="Changes" comment="added add DeleteContactTest">
+    <list default="true" id="c4041311-9419-44a4-9c5f-ba00fc1783c3" name="Changes" comment="created validateUIListContact">
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/ContactsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ContactsScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +80,8 @@
       <recent name="interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AddNewContactTests.addNewContactPositiveTestValidateUIListContact">
-    <configuration name="AddNewContactTests.addNewContactNegativeTest_duplicateContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.LogoutTests.logout">
+    <configuration name="EditContactTests.editContactNegativeTest_emptyName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -92,7 +94,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.AddNewContactTests.addNewContactNegativeTest_duplicateContact&quot;" />
+            <option value="&quot;mobile_tests.EditContactTests.editContactNegativeTest_emptyName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -103,7 +105,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AddNewContactTests.addNewContactNegativeTest_emptyField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EditContactTests.editContactPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -116,7 +118,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.AddNewContactTests.addNewContactNegativeTest_emptyField&quot;" />
+            <option value="&quot;mobile_tests.EditContactTests.editContactPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -127,7 +129,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AddNewContactTests.addNewContactPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EditContactTests.editContactPositiveTestValidateApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -140,7 +142,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.AddNewContactTests.addNewContactPositiveTest&quot;" />
+            <option value="&quot;mobile_tests.EditContactTests.editContactPositiveTestValidateApi&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -151,7 +153,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AddNewContactTests.addNewContactPositiveTestValidateUIListContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -164,7 +166,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.AddNewContactTests.addNewContactPositiveTestValidateUIListContact&quot;" />
+            <option value="&quot;mobile_tests.LoginTests.loginPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,7 +177,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DeleteContactTest.deleteContactPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LogoutTests.logout" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -188,7 +190,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.DeleteContactTest.deleteContactPositiveTest&quot;" />
+            <option value="&quot;mobile_tests.LogoutTests.logout&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -201,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AddNewContactTests.addNewContactPositiveTestValidateUIListContact" />
-        <item itemvalue="Gradle.AddNewContactTests.addNewContactPositiveTest" />
-        <item itemvalue="Gradle.DeleteContactTest.deleteContactPositiveTest" />
-        <item itemvalue="Gradle.AddNewContactTests.addNewContactNegativeTest_duplicateContact" />
-        <item itemvalue="Gradle.AddNewContactTests.addNewContactNegativeTest_emptyField" />
+        <item itemvalue="Gradle.LogoutTests.logout" />
+        <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
+        <item itemvalue="Gradle.EditContactTests.editContactPositiveTestValidateApi" />
+        <item itemvalue="Gradle.EditContactTests.editContactNegativeTest_emptyName" />
+        <item itemvalue="Gradle.EditContactTests.editContactPositiveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731664415210</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="created validateUIListContact">
+      <option name="closed" value="true" />
+      <created>1732037356949</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732037356949</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -294,6 +304,7 @@
     <MESSAGE value="added add new contact" />
     <MESSAGE value="added add new contact data provider" />
     <MESSAGE value="added add DeleteContactTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="added add DeleteContactTest" />
+    <MESSAGE value="created validateUIListContact" />
+    <option name="LAST_COMMIT_MESSAGE" value="created validateUIListContact" />
   </component>
 </project>

@@ -129,8 +129,7 @@ public class AddNewContactTests extends AppiumConfig {
         addNewContactsScreen.clickBtnCreateContact();
         softAssert.assertTrue(new ContactsScreen(driver).validatePopMessage());
 
-        contactsScreen.validateUIListContact(contact);
-
+        softAssert.assertTrue(contactsScreen.validateUIListContact(contact));
 
         softAssert.assertAll();
     }

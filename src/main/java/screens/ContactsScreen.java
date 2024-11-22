@@ -129,4 +129,9 @@ public class ContactsScreen extends BaseScreen {
         clickWait(btnMoreOptions, 3);
         clickWait(btnLogout, 3);
     }
+
+    public void goToDatePicker() {
+        clickWait(btnMoreOptions, 3);
+        clickWait(btnDataPicker, 3);
+    }
 }

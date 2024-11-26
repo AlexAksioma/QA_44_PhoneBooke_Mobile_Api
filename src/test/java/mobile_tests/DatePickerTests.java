@@ -31,6 +31,6 @@ public class DatePickerTests extends AppiumConfig {
 
     @Test
     public void datePickerTest(){
-        new DatePickerScreen(driver).typeDate("29 November 2023");
+        new DatePickerScreen(driver).typeDate("11 April 2023");
     }
 }

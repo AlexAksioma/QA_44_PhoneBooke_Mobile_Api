@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4041311-9419-44a4-9c5f-ba00fc1783c3" name="Changes" comment="created sql">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="c4041311-9419-44a4-9c5f-ba00fc1783c3" name="Changes" comment="created date">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/DatePickerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/DatePickerScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" afterDir="false" />
@@ -291,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732269512747</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="created date">
+      <option name="closed" value="true" />
+      <created>1732640854259</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732640854259</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -306,6 +313,7 @@
     <MESSAGE value="created validateUIListContact" />
     <MESSAGE value="created LogoutTests" />
     <MESSAGE value="created sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="created sql" />
+    <MESSAGE value="created date" />
+    <option name="LAST_COMMIT_MESSAGE" value="created date" />
   </component>
 </project>

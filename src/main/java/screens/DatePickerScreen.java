@@ -4,6 +4,8 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -30,6 +32,8 @@ public class DatePickerScreen extends BaseScreen {
     AndroidElement btnPickerYear;
     @FindBy(id = "android:id/button1")
     AndroidElement btnOk;
+    @FindBy(id = "com.sheygam.contactapp:id/dateTxt")
+    AndroidElement dateResult;
 
 
     public void typeDate(String date) {  //29 November 2024   01 November 2024
@@ -40,7 +44,10 @@ public class DatePickerScreen extends BaseScreen {
         //year ======================================
         if (localDate.getYear() != Integer.parseInt(arrayDate[2])) {
             btnPickerYear.click();
-            driver.findElement(By.xpath("//*[@text='" + arrayDate[2] + "']")).click();
+            new WebDriverWait(driver, 5)
+                    .until(ExpectedConditions.elementToBeClickable(
+                            By.xpath("//*[@text='" + arrayDate[2] + "']"))).click();
+            //driver.findElement(By.xpath("//*[@text='" + arrayDate[2] + "']")).click();
         }
         btnPrevMonth.click(); // bug local date
         //month ======================================
@@ -61,10 +68,23 @@ public class DatePickerScreen extends BaseScreen {
         }
         //month ======================================
         driver.findElement(By.xpath("//android.view.View[@content-desc='" + date + "']")).click();
+    }
 
+    public void clickBtnOk() {
+        btnOk.click();
+    }
 
-//        AndroidElement pickerDate = driver.findElement(By.xpath("//*[@content-desc='"+date+"']"));
-//        pickerDate.click();
+    public boolean validateDate(String date) { //01 November 2024    res 	30/03/2023
+        String dateResultText = dateResult.getText();
+        System.out.println("dateResultText --> " + dateResultText);
+        String[] arrayDateResult = dateResultText.split("/");
+        String[] arrayDate = date.split(" ");
+        if (arrayDate[0].equals(arrayDateResult[0])
+                && numberMonth(arrayDate[1]) == Integer.parseInt(arrayDateResult[1])
+                && arrayDate[2].equals(arrayDateResult[2]))
+            return true;
+        else
+            return false;
     }
 
     private int numberMonth(String month) {

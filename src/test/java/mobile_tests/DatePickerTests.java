@@ -2,6 +2,7 @@ package mobile_tests;
 
 import config.AppiumConfig;
 import dto.UserDtoLombok;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import screens.AuthenticationScreen;
@@ -13,6 +14,7 @@ import static helper.PropertiesReader.getProperty;
 
 public class DatePickerTests extends AppiumConfig {
 
+    DatePickerScreen datePickerScreen;
     UserDtoLombok user = UserDtoLombok.builder()
             .username(getProperty("data.properties", "email"))
             .password(getProperty("data.properties", "password"))
@@ -31,6 +33,9 @@ public class DatePickerTests extends AppiumConfig {
 
     @Test
     public void datePickerTest(){
-        new DatePickerScreen(driver).typeDate("11 April 2023");
+        datePickerScreen = new DatePickerScreen(driver);
+        datePickerScreen.typeDate("30 May 2024");
+        datePickerScreen.clickBtnOk();
+        Assert.assertTrue(datePickerScreen.validateDate("30 April 2024"));
     }
 }

@@ -21,7 +21,7 @@ public class DatePickerTests extends AppiumConfig {
             .build();
     ContactsScreen contactsScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void loginAndGoToAddNewContactScreen() {
         new SplashScreen(driver).goToAuthScreen(5);
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
@@ -31,11 +31,11 @@ public class DatePickerTests extends AppiumConfig {
         contactsScreen.goToDatePicker();
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void datePickerTest(){
         datePickerScreen = new DatePickerScreen(driver);
         datePickerScreen.typeDate("30 May 2024");
         datePickerScreen.clickBtnOk();
-        Assert.assertTrue(datePickerScreen.validateDate("30 April 2024"));
+        Assert.assertTrue(datePickerScreen.validateDate("30 May 2024"));
     }
 }

@@ -25,7 +25,7 @@ public class EditContactTests extends AppiumConfig {
             .build();
     ContactsScreen contactsScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void loginAndGoToAddNewContactScreen() {
         new SplashScreen(driver).goToAuthScreen(5);
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
@@ -49,7 +49,7 @@ public class EditContactTests extends AppiumConfig {
         Assert.assertTrue(new ContactsScreen(driver).validatePopMessage("Contact was updated!"));
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void editContactPositiveTestValidateApi(){
         ContactDtoLombok contact = ContactDtoLombok.builder()
                 .name("edit-" + generateString(2))

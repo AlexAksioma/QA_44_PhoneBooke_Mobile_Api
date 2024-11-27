@@ -17,7 +17,7 @@ import static helper.RandomUtils.*;
 public class RegistrationTests extends AppiumConfig {
 
 
-    @Test
+    @Test(groups = "smoke")
     public void registrationPositiveTest() {
         UserDtoLombok user = UserDtoLombok.builder()
                 .username(generateEmail(10))

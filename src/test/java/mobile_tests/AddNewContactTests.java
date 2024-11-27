@@ -27,7 +27,7 @@ public class AddNewContactTests extends AppiumConfig {
     AddNewContactsScreen addNewContactsScreen;
     ContactsScreen contactsScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void loginAndGoToAddNewContactScreen() {
         new SplashScreen(driver).goToAuthScreen(5);
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
@@ -53,7 +53,7 @@ public class AddNewContactTests extends AppiumConfig {
         Assert.assertTrue(new ContactsScreen(driver).validatePopMessage());
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void addNewContactPositiveTestValidateContactApi() {
         ContactDtoLombok contact = ContactDtoLombok.builder()
                 .name(generateString(5))

@@ -19,7 +19,7 @@ public class AppiumConfig {
 //         "platformVersion": "8.0",
 //         "appPackage": "com.sheygam.contactapp",
 //         "appActivity": ".SplashActivity"
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("platformName", "Android");
@@ -39,7 +39,7 @@ public class AppiumConfig {
         System.out.println(width + "X" + height);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         //driver.quit();
     }

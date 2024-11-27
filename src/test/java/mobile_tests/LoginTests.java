@@ -16,13 +16,13 @@ import static helper.RandomUtils.*;
 public class LoginTests extends AppiumConfig {
     AuthenticationScreen authenticationScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void openLoginForm(){
         new SplashScreen(driver).goToAuthScreen(5);
         authenticationScreen = new AuthenticationScreen(driver);
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void loginPositiveTest(){
         UserDtoLombok user = UserDtoLombok.builder()
                 .username(getProperty("data.properties", "email"))

@@ -15,7 +15,7 @@ import static helper.PropertiesReader.getProperty;
 public class RegistrationTests extends AuthenticationController {
     SoftAssert softAssert = new SoftAssert();
 
-    @Test
+    @Test(groups = "api_tests")
     public void registrationPositiveTest() {
         UserDto user = new UserDto(generateEmail(12), "Password123!");
 //        UserDtoLombok userDtoLombok = UserDtoLombok.builder()

@@ -1,0 +1,3 @@
+./gradlew clean smoke_tests
+./gradlew clean -Ptype_dc=Nex5 smoke_tests
+./gradlew clean -Ptype_dc=A35 smoke_tests

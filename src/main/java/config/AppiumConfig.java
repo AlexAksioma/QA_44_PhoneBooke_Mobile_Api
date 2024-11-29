@@ -13,6 +13,11 @@ import java.net.URL;
 public class AppiumConfig {
     public static AppiumDriver<AndroidElement> driver;
     public int height = 0, width = 0;
+    static String type_dc;
+
+    public AppiumConfig() {
+        type_dc = System.getProperty("type_dc", "Nex5");
+    }
 
     // "platformName": "Android",
 //         "deviceName": "Nex5",
@@ -21,16 +26,32 @@ public class AppiumConfig {
 //         "appActivity": ".SplashActivity"
     @BeforeMethod(alwaysRun = true)
     public void setup() {
-        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("deviceName", "Nex5");
-        desiredCapabilities.setCapability("platformVersion", "8.0");
-        desiredCapabilities.setCapability("appPackage", "com.sheygam.contactapp");
-        desiredCapabilities.setCapability("appActivity", ".SplashActivity");
+        DesiredCapabilities desiredCapabilitiesNex5 = new DesiredCapabilities();
+        desiredCapabilitiesNex5.setCapability("platformName", "Android");
+        desiredCapabilitiesNex5.setCapability("deviceName", "Nex5");
+        desiredCapabilitiesNex5.setCapability("platformVersion", "8.0");
+        desiredCapabilitiesNex5.setCapability("appPackage", "com.sheygam.contactapp");
+        desiredCapabilitiesNex5.setCapability("appActivity", ".SplashActivity");
+        desiredCapabilitiesNex5.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
+        String urlNex5 = "http://localhost:4723/wd/hub";
 
-        desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
+        DesiredCapabilities desiredCapabilitiesA35 = new DesiredCapabilities();
+        desiredCapabilitiesA35.setCapability("platformName", "Android");
+        desiredCapabilitiesA35.setCapability("deviceName", "A35");
+        desiredCapabilitiesA35.setCapability("platformVersion", "13");
+        desiredCapabilitiesA35.setCapability("appPackage", "com.sheygam.contactapp");
+        desiredCapabilitiesA35.setCapability("appActivity", ".SplashActivity");
+        desiredCapabilitiesA35.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
+        String urlA35 = "http://localhost:4723/wd/hub";
+
         try {
-            driver = new AppiumDriver<>(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+            if (type_dc.equals("Nex5")) {
+                System.out.println("========start Nex5===============");
+                driver = new AppiumDriver<>(new URL(urlNex5), desiredCapabilitiesNex5);
+            } else if (type_dc.equals("A35")) {
+                System.out.println("========start A35===============");
+                driver = new AppiumDriver<>(new URL(urlA35), desiredCapabilitiesA35);
+            }
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -39,8 +60,9 @@ public class AppiumConfig {
         System.out.println(width + "X" + height);
     }
 
+
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 }

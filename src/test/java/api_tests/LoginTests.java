@@ -17,7 +17,7 @@ public class LoginTests extends AuthenticationController {
 
     SoftAssert softAssert = new SoftAssert();
 
-    @Test
+    @Test(groups = "api_tests")
     public void loginPositiveTest() {
         UserDtoLombok user = UserDtoLombok.builder()
                 .username(getProperty("data.properties", "email"))

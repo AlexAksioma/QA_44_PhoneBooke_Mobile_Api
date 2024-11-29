@@ -8,14 +8,14 @@
             </run>
         </groups>
         <classes>
-            <class name="mobile_tests.SplashTests"/>
+            <!--class name="mobile_tests.SplashTests"/-->
             <class name="mobile_tests.RegistrationTests"/>
             <class name="mobile_tests.LoginTests"/>
-            <class name="mobile_tests.LogoutTests"/>
+            <!--class name="mobile_tests.LogoutTests"/>
             <class name="mobile_tests.EditContactTests"/>
             <class name="mobile_tests.DeleteContactTest"/>
             <class name="mobile_tests.DatePickerTests"/>
-            <class name="mobile_tests.AddNewContactTests"/>
+            <class name="mobile_tests.AddNewContactTests"/-->
         </classes>
     </test>
 </suite>

@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4041311-9419-44a4-9c5f-ba00fc1783c3" name="Changes" comment="created date test">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/run_smoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="c4041311-9419-44a4-9c5f-ba00fc1783c3" name="Changes" comment="created xml">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/gradlewsettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/run_api_tests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/SplashTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/SplashTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api_tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api_tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api_tests/RegistrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/run_smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/run_smoke.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,14 +73,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_43/QA_43_iLCarro_Api_Mobile",
+    "last_opened_file_path": "C:/QA_Auto_Projects/JuliaProject",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\QA_Auto_Projects\QA_44\QA_44_PhoneBooke_Mobile_Api\src\main\resources\dp_data" />
       <recent name="C:\QA_Auto_Projects\QA_44\QA_44_PhoneBooke_Mobile_Api\src\test\resources" />
+      <recent name="C:\QA_Auto_Projects\QA_44\QA_44_PhoneBooke_Mobile_Api\src\main\resources\dp_data" />
       <recent name="C:\QA_Auto_Projects\QA_44\QA_44_PhoneBooke_Mobile_Api\src\main\java\helper" />
       <recent name="C:\QA_Auto_Projects\QA_44\QA_44_PhoneBooke_Mobile_Api\src\main\java\dto" />
     </key>
@@ -94,26 +89,13 @@
       <recent name="interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/QA_Auto_Projects/QA_44/QA_44_PhoneBooke_Mobile_Api/src/test/resources/run_smoke.xml">
+  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest">
     <configuration name="BaseSQL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="db_mysql.BaseSQL" />
       <module name="QA_44_PhoneBooke_Mobile_Api.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="db_mysql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DatePickerScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="screens.DatePickerScreen" />
-      <module name="QA_44_PhoneBooke_Mobile_Api.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="screens.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,6 +151,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;mobile_tests.LoginTests.loginPositiveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="C:/QA_Auto_Projects/QA_44/QA_44_PhoneBooke_Mobile_Api/src/test/resources/run_smoke.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA_44_PhoneBooke_Mobile_Api.test" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/run_smoke.xml" />
@@ -181,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
         <item itemvalue="TestNG.C:/QA_Auto_Projects/QA_44/QA_44_PhoneBooke_Mobile_Api/src/test/resources/run_smoke.xml" />
         <item itemvalue="Gradle.DatePickerTests.datePickerTest" />
         <item itemvalue="Gradle.DatePickerTests" />
         <item itemvalue="Application.BaseSQL" />
-        <item itemvalue="Application.DatePickerScreen" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732642783273</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="created xml">
+      <option name="closed" value="true" />
+      <created>1732716880812</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732716880812</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -319,6 +333,7 @@
     <MESSAGE value="created sql" />
     <MESSAGE value="created date" />
     <MESSAGE value="created date test" />
-    <option name="LAST_COMMIT_MESSAGE" value="created date test" />
+    <MESSAGE value="created xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="created xml" />
   </component>
 </project>

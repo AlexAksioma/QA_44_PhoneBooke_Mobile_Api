@@ -19,7 +19,7 @@ public class ContactController implements BaseApi {
     private RequestSpecification requestSpecWithToken;
     RequestSpecBuilder requestSpecBuilder;
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void login() {
         UserDtoLombok user = UserDtoLombok.builder()
                 .username(getProperty("data.properties", "email"))

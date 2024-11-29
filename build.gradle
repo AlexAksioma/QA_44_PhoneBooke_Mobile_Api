@@ -40,6 +40,15 @@ task smoke_tests(type: Test) {
     }
 }
 
+task api_mobile_tests(type: Test) {
+    useTestNG() {
+        suites 'src/test/resources/run_api_mobile.xml'
+    }
+    if(project.hasProperty('type_dc')){
+        systemProperty 'type_dc', "${type_dc}"
+    }
+}
+
 task api_tests(type: Test) {
     useTestNG() {
         suites 'src/test/resources/run_api_tests.xml'

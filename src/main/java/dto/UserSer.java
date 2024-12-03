@@ -2,15 +2,17 @@ package dto;
 
 import java.io.*;
 
-public class UserDto implements Serializable{
-    private static final long serialVersionUID = 6543456L;
+public class UserSer implements Serializable{
+    @Serial
+    private static final long serialVersionUID = 65434123L;
 
+    public static int anInt;
     private String username;
-    private String password;
+    transient private String password;
 
+    final String email = "name@mail.com";
 
-
-    public UserDto(String username, String password) {
+    public UserSer(String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -31,7 +33,7 @@ public class UserDto implements Serializable{
         this.password = password;
     }
 
-    public static void serializableUserDto(UserDto userDto, String fileName){
+    public static void serializableUser(UserSer userDto, String fileName){
         try {
             ObjectOutputStream outputStream = new ObjectOutputStream(
                     new FileOutputStream("src/main/resources/serialazable_file/"+fileName));
@@ -41,10 +43,10 @@ public class UserDto implements Serializable{
             throw new RuntimeException(e);
         }
     }
-    public static UserDto deSerializableUserDto(String fileName){
+    public static UserSer deSerializableUser(String fileName){
         try (ObjectInputStream inputStream = new ObjectInputStream(
                 new FileInputStream("src/main/resources/serialazable_file/"+fileName))){
-            return (UserDto) inputStream.readObject();
+            return (UserSer) inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
